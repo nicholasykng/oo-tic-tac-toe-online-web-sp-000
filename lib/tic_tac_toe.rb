@@ -114,4 +114,16 @@ def winner
   end
 end
 
+def play
+  until over?
+    turn
+  end
+  if won?
+    winner == "X" || winner == "O"
+    puts "Congratulations #{winner}!"
+  else draw?
+    puts "Cat's Game!"
+  end
+end
+
 end
